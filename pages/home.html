@@ -1,26 +1,32 @@
-<header>
-    <nav class="navbar navbar-default" id="menubar">
-        <ul class="nav navbar-nav navbar-left">
-          
-          <li><button id="menubutton"><i class="glyphicon glyphicon-list" id="menulogo"></i></button></li>
-          <li><a href="#/"><i class="glyphicon glyphicon-home" id="home"></i></a></li>
-        </ul>
+<div class="topmenu">
+  <header>
+      <nav class="navbar navbar-default" id="menubar">
+          <ul class="nav navbar-nav navbar-left">
+            <li><button id="menubutton"><i class="glyphicon glyphicon-list" id="menulogo"></i></button></li>
+            <li><a href="#/"><i class="glyphicon glyphicon-home" id="home"></i></a></li>
+          </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-        	<li ng-repeat="d in data">
-          	<a href="#/characteristics/{{d.id}}"><i class="fa fa-circle"></i></a>
+          <div class="navbar-header" id="header">
+            <a class="navbar-brand" href="#/">{{type.name}}</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-repeat="d in data">
+              <a href="#/characteristics/{{d.id}}"><i class="fa fa-circle"></i></a>
             </li>
-        </ul>
-    </nav>
-</header>
+          </ul>
+      </nav>
+  </header>
+</div>
 
- <p>{{message}}</p>
 <p><canvas id="canvas"></canvas></p>
-    <div id="data1">
-	    <table>
-	        <tr><th>DATA</th></tr>
-	         <tr ng-repeat="d in data">
-	          <td>{{d.name}} </td> <td>{{d.colour}}</td>
-	        </tr>
-	    </table>
-    </div>
+ <p>{{message}}</p>
+
+<div id="datahome">
+  <table>
+      <tr><th>DATA</th></tr>
+       <tr ng-repeat="d in data">
+        <td>{{d.name}} </td> <td>{{d.colour}}</td>
+      </tr>
+  </table>
+</div>
