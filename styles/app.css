@@ -1,0 +1,38 @@
+button, canvas {
+	/*Stop the blue outline!*/
+	outline: none !important;
+}
+
+#canvas{
+	border-radius: 50px;
+	border: 10px solid #B0B0B0;
+	width: 200px;
+	height: 100px;
+}
+
+#menubar{
+	background-color: #B0B0B0; 
+	height: 100px;
+}
+
+#menubar #menubutton{
+	/*Make the button invisible */
+	background-color : transparent;
+	border: 0px;
+	width: 100px;
+	height: 100px;
+
+	#menulogo{
+		/*center the logo in the menu*/
+    	margin: auto;
+    	width: 44px;
+    	height: 44px;
+	}
+}
+
+#menubar{
+	i:hover, i:active{
+		text-decoration: none;
+	}
+}
+

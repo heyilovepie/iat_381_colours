@@ -1,0 +1,25 @@
+<header>
+    <nav class="navbar navbar-default" id="menubar">
+        <ul class="nav navbar-nav navbar-left">
+          
+          <li><button id="menubutton"><i class="glyphicon glyphicon-list" id="menulogo"></i></button></li>
+          <li><a href="#/"><i class="glyphicon glyphicon-home" id="home"></i></a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-repeat="d in data">
+            <a href="#/characteristics/{{d.id}}"><i class="fa fa-circle"></i></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <div id="data">
+      <li>{{type.name}}</li>
+      <table>
+          <tr><th>DATA</th></tr>
+           <tr ng-repeat="d in data">
+            <td>{{d.name}} </td> <td>{{d.colour}}</td>
+          </tr>
+      </table>
+    </div>
