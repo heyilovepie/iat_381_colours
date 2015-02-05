@@ -32,4 +32,9 @@ myApp.data = [{"name":"Eyes", "id":"eye", "colour":"blue",
               {"name":"Shirt", "id":"shirt", "colour":"pink",
 "options":["blue", "green", "pink", "black"]}
 ];
+/*
+myApp.get("json/data.json", function( jsonData ){
+  myApp.data = jsonData;
+});
+*/
 

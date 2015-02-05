@@ -1,0 +1,13 @@
+[
+	{"name":"Eyes", "id":"eye", "colour":"blue", 
+	"options":["blue", "green", "brown", "black"]},
+
+	{"name":"Hair", "id":"hair", "colour":"brown",
+	"options":["blonde", "black", "brown", "red"]},
+
+	{"name":"Shirt", "id":"shirt", "colour":"pink",
+	"options":["blue", "green", "pink", "black"]}
+
+	{"name":"Pants", "id":"pants", "colour":"grey",
+	"options":["blue", "white", "grey", "black"]}
+]

@@ -5,7 +5,7 @@ myApp.controller('homeController', function($scope) {
 
 	function sketch(processing){
 		processing.setup = function(){
-			processing.size(500, 500);
+			processing.size(200, 300);
 			processing.background(255);
 		};
 		processing.draw = function(){

@@ -16,7 +16,7 @@ button, canvas, input {
 
 #canvas{
 	top: 10%;
-	border-radius: 50px;
+	border-radius: 20px;
 	border: 10px solid #B0B0B0;
 }
 
