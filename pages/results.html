@@ -1,27 +1,34 @@
-<header class="topmenu">
-    <nav class="navbar navbar-default" class="menubar">
-        <ul class="nav navbar-nav navbar-left">
-          
-          <li><button id="menubutton"><i class="glyphicon glyphicon-list" id="menulogo"></i></button></li>
-          <li><a href="#/"><i class="glyphicon glyphicon-home" id="home"></i></a></li>
-        </ul>
+<div class="topmenu">
+  <header>
+      <nav class="navbar navbar-default" id="menubar">
+          <ul class="nav navbar-nav navbar-left">
+            <li id="home" class="topelement"><a href="#/"><input type="image" src="pics/homeicong.png"></input></a></li>
+          </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-        	<li ng-repeat="d in data">
-          	<a href="#/characteristics/{{d.id}}"><i class="fa fa-circle"></i></a>
+          <div class="navbar-header" id="header">
+            <a class="navbar-brand" href="#/">{{type.name}}</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-repeat="d in data">
+              <a href="#/characteristics/{{d.id}}"><i class="fa fa-circle"></i></a>
             </li>
-        </ul>
-    </nav>
-</header>
+            <li><a href="#/results" class="active"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+          </ul>
+      </nav>
+  </header>
+</div>  
 
-<p><canvas id="canvas"></canvas></p>
- <p>{{message}}</p>
+<div class="graphics">
+  <p><canvas id="canvas"></canvas></p>
+  <p>{{message}}</p>
 
-<div id="datahome">
-  <table>
-      <tr><th>DATA</th></tr>
-       <tr ng-repeat="d in data">
-        <td>{{d.name}} </td> <td>{{d.colour}}</td>
-      </tr>
-  </table>
+  <div id="datahome">
+    <table>
+        <tr><th>DATA</th></tr>
+         <tr ng-repeat="d in data">
+          <td>{{d.name}} </td> <td>{{d.colour}}</td>
+        </tr>
+    </table>
+  </div>
 </div>

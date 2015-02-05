@@ -17,10 +17,11 @@ myApp.config(function ($routeProvider) {
       templateUrl: 'pages/results.html',
       controller : 'resultsController'
     })
-    
+    /*
     .otherwise({
       redirectTo: '/'
     });
+*/
 });
 
 

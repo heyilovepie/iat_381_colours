@@ -1,41 +1,52 @@
-button, canvas {
+button, canvas, input {
 	/*Stop the blue outline!*/
 	outline: none !important;
 	background-color : transparent;
 	border: 0px;
 }
+/* this is the processing canvas stuff */
+.graphics{
+	position: fixed;
+	top:20%;
+	height: 50%;
+	width: 100%;
+	background-color: #fdf;
+	text-align: center;
+}
 
 #canvas{
+	top: 10%;
 	border-radius: 50px;
 	border: 10px solid #B0B0B0;
-	width: 200px;
-	height: 100px;
+}
+
+/*Top Menu stuff */
+.circlelink{
+	top: 0px;
+	height:20%;
+	background-color: #FFFFFF;
 }
 
 #menubar{
+	position: fixed;
 	background-color: #B0B0B0; 
-	height: 100px;
+	height: 20%;
 }
 
 #menubar #menubutton{
-	/*Make the button invisible */
-	background-color : transparent;
 	border: 0px;
 	width: 100px;
 	height: 100px;
-
-	#menulogo{
-		/*center the logo in the menu*/
-    	margin: auto;
-    	width: 44px;
-    	height: 44px;
-	}
 }
 
-#menubar{
-	i:hover, i:active{
-		text-decoration: none;
-	}
+#menubar #menulogo{
+	margin: auto;
+	width: 44px;
+	height: 44px;
+}
+
+#menubar i:hover, #menubar i:active{
+	text-decoration: none;
 }
 
 .charabutton{
@@ -46,41 +57,45 @@ button, canvas {
 	bottom: 0;
 }
 
-.topmenu{
-	header {
-	    position:fixed;
-	    top:0;
-	    left:0;
-	    display:block;
-	    width:100%;
-	    height:60px;
-	    border-bottom:1px solid #108ac2;
-	    box-shadow:1px 1px 1px 1px rgba(16,138,194,0.76);
-	    background:#fff;
-	    opacity:.9;
-	}
-
-	header nav {
-	    width:960px;
-	    margin:0 auto;
-	}
+.topmenu header {
+    position:fixed;
+    top:0;
+    left:0;
+    display:block;
+    width:100%;
+    height:60px;
+    border-bottom:1px solid #108ac2;
+    box-shadow:1px 1px 1px 1px rgba(16,138,194,0.76);
+    background:#fff;
+    opacity:.9;
 }
 
-#charamenu{
-    /* this is inside @media screen and (max-width: 480px)  */
-	header {
-	    position:fixed;
-	    bottom:0 !important;
-	    left:0 !important;
-	    top: initial;
-	}
+.topmenu header nav {
+    width:100%;
+    margin:0 auto;
 
-	header nav {
-	    width:100%;
-	    margin:0;
-	    height:80px;
-	}
-	.container {
-	    margin:0 0 100px 0;
-	}
+}
+
+#charamenu footer {
+    position:fixed;
+    bottom:0 !important;
+}
+
+#charamenu footer nav {
+    width:100%;
+    margin:0;
+    height:80px;
+}
+
+#charamenu #container{
+	position:fixed;
+    bottom:0 !important;
+    width: 100%;
+}
+
+#charamenu .navbar .navbar-default{
+	background-color: #B0B0B0; 
+	position: fixed;
+	bottom:0 !important;
+	display: inline-block;
 }

@@ -2,12 +2,11 @@
   <header>
       <nav class="navbar navbar-default" id="menubar">
           <ul class="nav navbar-nav navbar-left">
-            <li><button id="menubutton"><i class="glyphicon glyphicon-list" id="menulogo"></i></button></li>
-            <li><a href="#/"><i class="glyphicon glyphicon-home" id="home"></i></a></li>
+            <li id="home" class="active topelement"><a href="#/"><input type="image" src="pics/homeicong.png"></input></a></li>
           </ul>
 
           <div class="navbar-header" id="header">
-            <a class="navbar-brand" href="#/">{{type.name}}</a>
+            <a class="navbar-brand" id="typename" href="#/">Home</a>
           </div>
 
           <ul class="nav navbar-nav navbar-right">
@@ -19,14 +18,16 @@
   </header>
 </div>
 
-<p><canvas id="canvas"></canvas></p>
- <p>{{message}}</p>
+<div class="graphics">
+  <p><canvas id="canvas"></canvas></p>
+  <p>{{message}}</p>
 
-<div id="datahome">
-  <table>
-      <tr><th>DATA</th></tr>
-       <tr ng-repeat="d in data">
-        <td>{{d.name}} </td> <td>{{d.colour}}</td>
-      </tr>
-  </table>
+  <div id="datahome">
+    <table>
+        <tr><th>DATA</th></tr>
+         <tr ng-repeat="d in data">
+          <td>{{d.name}} </td> <td>{{d.colour}}</td>
+        </tr>
+    </table>
+  </div>
 </div>
