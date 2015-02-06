@@ -5,6 +5,7 @@ myApp.controller('homeController', function($scope, dataProvider) {
 	    if(!err && myApp.data == undefined){
 	    	console.log("assign data");
 	    	myApp.data = data;
+	    	$scope.data = myApp.data;
 	    }
 	});
 	$scope.data = myApp.data;

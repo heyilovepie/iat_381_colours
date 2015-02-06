@@ -4,6 +4,7 @@ myApp.controller('characteristicsController', function($scope, $routeParams, dat
       if(!err && myApp.data == undefined){
         console.log("assign data");
         myApp.data = data;
+        $scope.data = myApp.data;
       }
   });
 
