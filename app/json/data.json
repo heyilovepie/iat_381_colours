@@ -1,13 +1,46 @@
 [
-	{"name":"Eyes", "id":"eye", "colour":"blue", 
-	"options":["blue", "green", "brown", "black"]},
-
-	{"name":"Hair", "id":"hair", "colour":"brown",
-	"options":["blonde", "black", "brown", "red"]},
-
-	{"name":"Shirt", "id":"shirt", "colour":"pink",
-	"options":["blue", "green", "pink", "black"]}
-
-	{"name":"Pants", "id":"pants", "colour":"grey",
-	"options":["blue", "white", "grey", "black"]}
+	{
+		"name":"Eyes",
+		"id":"eye",
+		"colour":"blue",
+		"options":[
+			{"name": "blue"},
+			{"name": "black"},
+			{"name": "brown"},
+			{"name": "green"}
+		]
+	},
+	{
+		"name":"Hair",
+		"id":"hair",
+		"colour":"brown",
+		"options":[
+			{"name": "blonde"},
+			{"name": "black"},
+			{"name": "brown"},
+			{"name": "red"}
+		]
+	},
+	{
+		"name":"Shirt",
+		"id":"shirt",
+		"colour":"pink",
+		"options":[
+			{"name": "blue"},
+			{"name": "black"},
+			{"name": "pink"},
+			{"name": "green"}
+		]
+	},
+	{
+		"name":"Pants",
+		"id":"pants",
+		"colour":"grey",
+		"options":[
+			{"name": "blue"},
+			{"name": "black"},
+			{"name": "white"},
+			{"name": "grey"}
+		]
+	}
 ]
