@@ -1,10 +1,13 @@
 // create the controller and inject Angular's $scope
 myApp.controller('characteristicsController', function($scope, $routeParams, dataProvider){
   dataProvider.getData(function(err, data){
-    if(!err){
-      $scope.data = data;
-    }
+      if(!err && myApp.data == undefined){
+        console.log("assign data");
+        myApp.data = data;
+      }
   });
+
+  $scope.data = myApp.data;
 
 	$scope.setType = function(){
 		angular.forEach($scope.data, function(item) {
