@@ -1,4 +1,8 @@
-myApp.controller('resultsController', function($scope) {
+myApp.controller('resultsController', function($scope, dataProvider) {
 	$scope.message = 'This is a shitty app!';
-	$scope.data = myApp.data;
+	dataProvider.getData(function(err, data){
+		if(!err){
+			$scope.data = data;
+		}
+	});
 });
