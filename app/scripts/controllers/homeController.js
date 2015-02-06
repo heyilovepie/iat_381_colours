@@ -1,7 +1,12 @@
 // create the controller and inject Angular's $scope
-myApp.controller('homeController', function($scope) {
+myApp.controller('homeController', function($scope, dataProvider) {
+    dataProvider.getData(function(err, data){
+        if(!err && myApp.data == undefined){ 
+          myApp.data = data; 
+        }
+    });
+    $scope.data = myApp.data;
 	$scope.message = 'This is a shitty app!';
-	$scope.data = myApp.data;
 
 	function sketch(processing){
 		processing.setup = function(){

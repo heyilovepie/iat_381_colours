@@ -1,6 +1,11 @@
 // create the controller and inject Angular's $scope
-myApp.controller('characteristicsController', function($scope, $routeParams){
-  	$scope.data = myApp.data;
+myApp.controller('characteristicsController', function($scope, $routeParams, dataProvider){
+    dataProvider.getData(function(err, data){
+        if(!err && myApp.data == undefined){ //if you haven't already loaded the global variable (in another script) then load the data from the .json file
+          myApp.data = data; //assign global variable
+        }
+    });
+    $scope.data = myApp.data; //assign local variable
 
   	$scope.setType = function(){
   		angular.forEach($scope.data, function(item) {
