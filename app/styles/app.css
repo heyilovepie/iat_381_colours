@@ -93,7 +93,7 @@ button, canvas, input {
     width: 100%;
 }
 
-#charamenu .navbar .navbar-default{
+#charamenu .navbar.navbar-default{
 	background-color: #B0B0B0; 
 	position: fixed;
 	bottom:0 !important;
