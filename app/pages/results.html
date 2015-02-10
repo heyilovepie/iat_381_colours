@@ -1,23 +1,19 @@
-<div class="topmenu">
-  <header>
-      <nav class="navbar navbar-default" id="menubar">
-          <ul class="nav navbar-nav navbar-left">
-            <li id="home" class="topelement"><a href="#/"><input type="image" src="pics/homeicon.png" alt="home"></input></a></li>
-          </ul>
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation-bar">
+    <ul class="nav navbar-nav navbar-left">
+      <li id="home"><a href="#/"><input id="homeicon" type="image" src="pics/homeicon.png" alt="home"></input></a></li>
+    </ul>
 
-          <div class="navbar-header" id="header">
-            <a class="navbar-brand" href="#/">{{type.name}}</a>
-          </div>
+    <div class="navbar-header" id="header">
+      <a class="navbar-brand" id="typename" href="#/results">Results</a>
+    </div>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li ng-repeat="d in data">
-              <a href="#/characteristics/{{d.id}}"><i class="fa fa-circle"></i></a>
-            </li>
-            <li><a href="#/results" class="active"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-          </ul>
-      </nav>
-  </header>
-</div>  
+    <ol class="nav navbar-nav navbar-right">
+      <li ng-repeat="d in data">
+        <a href="#/characteristics/{{d.id}}"><i class="fa fa-circle"></i></a>
+      </li>
+      <li><a href="#/results" class="active"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+    </ol>
+</nav>
 
 <div class="graphics">
   <p><canvas id="canvas"></canvas></p>

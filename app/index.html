@@ -9,7 +9,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="styles/app.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
 
     <!--bower components -->
     <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
@@ -17,19 +17,23 @@
     <script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
 
-    <!-- main script -->
+    <!-- configuring controllers -->
     <script type="text/javascript" src="scripts/configure.js"></script>
+
+    <!--resizing-->
+    <script type="text/javascript" src="scripts/sizing.js"></script>
 
     <!--controllers-->
     <script type="text/javascript" src="scripts/controllers/homeController.js"></script>
     <script type="text/javascript" src="scripts/controllers/characteristicsController.js"></script>
     <script type="text/javascript" src="scripts/controllers/resultsController.js"></script>
 
-    <!--provider -->
-    <script type="text/javascript" src="scripts/providers/provider.js"></script>
+    <!--providers -->
+    <script type="text/javascript" src="scripts/providers/dataProvider.js"></script>
+    <script type="text/javascript" src="scripts/providers/processingProvider.js"></script>
   </head>
 
-  <body id="all" ng-app='characterApp'>
+  <body ng-app='characterApp'>
     <div ng-view></div>
   </body>
 

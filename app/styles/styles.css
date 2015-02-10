@@ -1,0 +1,84 @@
+button, canvas, input {
+	/*Stop the blue outline!*/
+	outline: none !important;
+	background-color : transparent;
+	border: 0px
+}
+
+a{
+	/* Stop the light grey background */
+	background-color: transparent
+}
+
+.center {
+	text-align: center
+}
+
+i:hover, i:active{
+	text-decoration: none;
+	background-color : transparent
+}
+
+/* Top Menu */
+
+.navbar.navbar-default.navbar-fixed-top#navigation-bar{
+	background-color: #B0B0B0;
+	height: 20%
+}
+
+#navigation-bar .nav.navbar-nav{
+	height: 100%;
+	background-color: #FF3300
+}
+
+#navigation-bar .nav.navbar-nav.navbar-right{
+	right: 50%;
+	width: 50%
+}
+
+#navigation-bar .nav.navbar-nav.navbar-left #home{
+	height: 100%;
+	width: 100%;
+}
+
+#navigation-bar .nav.navbar-nav.navbar-left #home a{
+	background-color: transparent;
+	height: 100%;
+	width: 100%;
+}
+
+#navigation-bar .nav.navbar-nav.navbar-left #home a #homeicon{
+	height: 100%;
+	width: 100%;
+}
+
+#homeicon:active{
+	background-color: #FF2233
+}
+
+/*Middle */
+.graphics{
+	position: fixed;
+	top:20%;
+	bottom:10%;
+	width: 100%;
+	background-color: #fdf;
+	text-align: center;
+}
+
+/* Bottom Menu */
+
+.navbar.navbar-default.navbar-fixed-bottom{
+	background-color: #B0B0B0;
+	height: 10%;
+}
+
+
+
+
+/*
+displays the lines in the same line for horizontal bars
+li {
+    display: inline;
+}
+*/
