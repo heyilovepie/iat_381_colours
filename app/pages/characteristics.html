@@ -1,4 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="navigation-bar">
+  <div class="container-fluid">
     <ul class="nav navbar-nav navbar-left">
       <li id="home"><a href="#/"><input id="homeicon" type="image" src="pics/homeicon.png" alt="home"></input></a></li>
     </ul>
@@ -11,8 +12,9 @@
       <li ng-repeat="d in data">
         <a href="#/characteristics/{{d.id}}" id="{{d.id}}" class="circlelink {{isActive(d.id)}}"><i class="fa fa-circle"></i></a>
       </li>
-      <li><a href="#/results"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+      <li><a href="#/results"><input id="charactericon" type="image" src="pics/charactericon.png" alt="character"></input></a></li>
     </ol>
+  </div>
 </nav>
 
 <div class="graphics">

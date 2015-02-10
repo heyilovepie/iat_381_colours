@@ -15,6 +15,9 @@ myApp.config(function ($routeProvider) {
       templateUrl: 'pages/results.html',
       controller : 'resultsController'
     })
+    .when('/example', {
+      templateUrl: 'pages/example.html',
+    })
     .otherwise({
       redirectTo: '/'
     });

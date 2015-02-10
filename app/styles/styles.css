@@ -1,3 +1,12 @@
+html {
+  min-height:100%;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  position:relative;
+  width:100%;
+}
+
+
 button, canvas, input {
 	/*Stop the blue outline!*/
 	outline: none !important;
@@ -28,12 +37,20 @@ i:hover, i:active{
 
 #navigation-bar .nav.navbar-nav{
 	height: 100%;
-	background-color: #FF3300
+	background-color: #FF2233
+}
+
+#navigation-bar .container-fluid{
+	height: 100%;
 }
 
 #navigation-bar .nav.navbar-nav.navbar-right{
-	right: 50%;
-	width: 50%
+	width: 40%;
+	height: 100%
+}
+
+#navigation-bar .nav.navbar-nav.navbar-left{
+	width: 20%;
 }
 
 #navigation-bar .nav.navbar-nav.navbar-left #home{
@@ -47,13 +64,28 @@ i:hover, i:active{
 	width: 100%;
 }
 
-#navigation-bar .nav.navbar-nav.navbar-left #home a #homeicon{
+#navigation-bar .container-fluid .nav.navbar-nav.navbar-left #home a #homeicon{
+	left:0%;
 	height: 100%;
 	width: 100%;
 }
 
-#homeicon:active{
-	background-color: #FF2233
+#navigation-bar .container-fluid #header{
+	top: 10%;
+	width: 10%;
+	height: 100%;
+} 
+
+#navigation-bar .container-fluid #header #typename{
+	padding: 40px;
+	width: 100%;
+	height: 100%;
+	background-color: #FF4444;
+} 
+
+#navigation-bar #home:active{
+	opacity: .5;
+	background-color: #FFFFFF
 }
 
 /*Middle */
@@ -66,19 +98,32 @@ i:hover, i:active{
 	text-align: center;
 }
 
+#canvas{
+	top: 20%;
+	width: 50%;
+	height: 70%;
+}
+
 /* Bottom Menu */
 
 .navbar.navbar-default.navbar-fixed-bottom{
 	background-color: #B0B0B0;
 	height: 10%;
+	width: 100%;
 }
 
-
-
-
-/*
-displays the lines in the same line for horizontal bars
-li {
-    display: inline;
+#characteristics-bar .nav.navbar-nav{
+	background-color: #FF2233;
+	width: 100%;
+	height: 100%;
 }
-*/
+
+#characteristics-bar .nav.navbar-nav li{
+	height: 100%;
+	width: 25%;
+}
+
+#characteristics-bar .nav.navbar-nav li button{
+	height: 100%;
+	width: 100%;
+}
