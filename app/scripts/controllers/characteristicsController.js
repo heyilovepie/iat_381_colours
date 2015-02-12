@@ -1,7 +1,6 @@
 // create the controller and inject Angular's $scope
 myApp.controller('characteristicsController', function($scope, $routeParams, dataProvider, processingProvider){
 
-  console.log("refreshing");
 	$scope.setType = function(){
 		angular.forEach($scope.data, function(item) {
     	if (item.id == $routeParams.charId){
@@ -15,23 +14,23 @@ myApp.controller('characteristicsController', function($scope, $routeParams, dat
 	};
 
   $scope.isActive = function(id){
-    //this makes the class active if the id matches this type
-    if($scope.type.id == id) return "active";
+    console.log("this is " + id);
+    //$('#'+id).addClass('using');
   };
-
 
   $scope.init = function () {
     var h = $(window).height();
     var w = $(window).width();
-    if (w > 720) {
-        $('#navigation-bar .nav.navbar-nav.navbar-right').css({
-            width: 400
-        });
-    } else {
-        $('#navigation-bar .nav.navbar-nav.navbar-right').css({
-            width: 350
-        });
-    }
+
+  //right part of navigation bar
+    rightWidth = w*.4;
+    if(rightWidth < 200) rightWidth = 200;
+    var charSize = $('#character-click').height();
+    if(charSize != undefined) rightWidth += charSize;
+    $('#navigation-bar .nav.navbar-nav.navbar-right').css({
+        width: rightWidth
+    });
+
     $('#canvas').css({ top: h*.2 });
     if (w > 720) {
       $('#canvas').css({ width: w*.5 });

@@ -32,7 +32,9 @@ i:hover, i:active{
 .navbar li{
 	margin: 0; padding: 0;
 	display: inline-block;
+	height: 100%;
 }
+
 .navbar a, .navbar i, .navbar ul{
 	margin: 0; padding: 0;
 	white-space: nowrap;
@@ -43,15 +45,17 @@ i:hover, i:active{
 	height: 100%;
 }
 
-.navbar .menuitem{
-	display: inline-block;
-}
-
 .navbar .container-fluid{
 	display: inline-block;
+	height: 100%;
 }
 
 /* Top Menu */
+
+#navigation-bar .using{
+	opacity: .5;
+	background-color: #FFFFFF
+}
 
 #navigation-bar{
 	background-color: #B0B0B0;
@@ -111,6 +115,14 @@ i:hover, i:active{
 #navigation-bar #home:active{
 	opacity: .5;
 	background-color: #FFFFFF
+}
+
+#navigation-bar #character-click{
+	height: 100%;
+}
+
+#navigation-bar #charactericon{
+	height: 100%;
 }
 
 /*Middle */

@@ -28,4 +28,12 @@
         </tr>
     </table>
   </div>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom" id="characteristics-bar">
+  <ul class="nav navbar-nav">
+    <li ng-repeat="d in type.options">
+      <button class="charabutton" href="#/characteristics/{{type.id}}" ng-click="setColour(d.name)"><li>{{d.name}}</li></button>
+    </li>
+  </ul>
+</nav>
 </div>

@@ -9,9 +9,9 @@
       </div>
       <ul class="nav navbar-nav navbar-right menuitem">
         <li ng-repeat="d in data">
-          <a href="#/characteristics/{{d.id}}" id="{{d.id}}" class="circlelink {{isActive(d.id)}}"><i class="fa fa-circle"></i></a>
+          <a href="#/characteristics/{{d.id}}" id="{{d.id}}" ng-click="isActive(d.id)" class="circlelink" ><i class="fa fa-circle"></i></a>
         </li>
-        <li><a href="#/results"><input id="charactericon" type="image" src="pics/charactericon.png" alt="character"></input></a></li>
+        <li><a id="character-click" href="#/results"><input id="charactericon" type="image" src="pics/charactericon.png" alt="character"></input></a></li>
       </ul>
     </div>
   </nav>
