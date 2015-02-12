@@ -18,6 +18,20 @@ myApp.controller('characteristicsController', function($scope, $routeParams, dat
 
 	$scope.setType();
 
+  $scope.init = function () {
+    var h = $(window).height();
+    var w = $(window).width();
+    if (w > 720) {
+        $('#navigation-bar .nav.navbar-nav.navbar-right').css({
+            width: 350
+        });
+    } else {
+        $('#navigation-bar .nav.navbar-nav.navbar-right').css({
+            width: 250
+        });
+    }
+  };
+
 	$scope.setColour = function(newColour){
 		$scope.type.colour = newColour;
 	};

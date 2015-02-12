@@ -6,7 +6,6 @@ html {
   width:100%;
 }
 
-
 button, canvas, input {
 	/*Stop the blue outline!*/
 	outline: none !important;
@@ -28,9 +27,29 @@ i:hover, i:active{
 	background-color : transparent
 }
 
+/* All Menus */
+
+.navbar li{
+	margin: 0; padding: 0;
+	display: inline-block;
+}
+
+.navbar ul{
+	margin: 0; padding: 0;
+	white-space: nowrap;
+}
+
+.navbar .menuitem{
+	display: inline-block;
+}
+
+.navbar .menuitem{
+	display: inline-block;
+}
+
 /* Top Menu */
 
-.navbar.navbar-default.navbar-fixed-top#navigation-bar{
+#navigation-bar{
 	background-color: #B0B0B0;
 	height: 20%
 }
@@ -42,10 +61,11 @@ i:hover, i:active{
 
 #navigation-bar .container-fluid{
 	height: 100%;
+	width: 100%;
 }
 
 #navigation-bar .nav.navbar-nav.navbar-right{
-	width: 40%;
+	width: 250px;
 	height: 100%
 }
 
