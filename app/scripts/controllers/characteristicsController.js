@@ -1,36 +1,14 @@
 // create the controller and inject Angular's $scope
 myApp.controller('characteristicsController', function($scope, $routeParams, dataProvider, processingProvider){
-  dataProvider.getData(function(err, data){
-      if(!err && myApp.data == undefined){
-        myApp.data = data;
-        $scope.data = myApp.data;
-      }
-  });
 
-  $scope.data = myApp.data;
-
+  console.log("refreshing");
 	$scope.setType = function(){
 		angular.forEach($scope.data, function(item) {
-    	if (item.id == $routeParams.charId) 
+    	if (item.id == $routeParams.charId){
   		  $scope.type = item;
+      }
  		 });
 	};
-
-	$scope.setType();
-
-  $scope.init = function () {
-    var h = $(window).height();
-    var w = $(window).width();
-    if (w > 720) {
-        $('#navigation-bar .nav.navbar-nav.navbar-right').css({
-            width: 350
-        });
-    } else {
-        $('#navigation-bar .nav.navbar-nav.navbar-right').css({
-            width: 250
-        });
-    }
-  };
 
 	$scope.setColour = function(newColour){
 		$scope.type.colour = newColour;
@@ -41,7 +19,45 @@ myApp.controller('characteristicsController', function($scope, $routeParams, dat
     if($scope.type.id == id) return "active";
   };
 
-  $scope.canvas = document.getElementById("canvas");
-  $scope.p = new Processing(canvas, processingProvider.sketch($scope.type.colour));
+
+  $scope.init = function () {
+    var h = $(window).height();
+    var w = $(window).width();
+    if (w > 720) {
+        $('#navigation-bar .nav.navbar-nav.navbar-right').css({
+            width: 400
+        });
+    } else {
+        $('#navigation-bar .nav.navbar-nav.navbar-right').css({
+            width: 350
+        });
+    }
+    $('#canvas').css({ top: h*.2 });
+    if (w > 720) {
+      $('#canvas').css({ width: w*.5 });
+    } else { //mobile
+      $('#canvas').css({ width: w*.8 });
+    }
+    
+    var homeHeight = $('#navigation-bar .nav.navbar-nav.navbar-left').height();
+    $('#navigation-bar .nav.navbar-nav.navbar-left').css({ width: homeHeight });
+
+
+   dataProvider.getData(function(err, data){
+      if(!err && myApp.data == undefined){
+        myApp.data = data;
+        $scope.data = myApp.data;
+      }
+    });
+
+    $scope.data = myApp.data;
+
+    $scope.setType();
+
+    $scope.canvas = document.getElementById("canvas");
+    $scope.p = new Processing(canvas, processingProvider.sketch("dfsdfsd"));
+  };
+
+  $scope.init();
 });
 
