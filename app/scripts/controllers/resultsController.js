@@ -6,15 +6,6 @@ myApp.controller('resultsController', function($scope, dataProvider, processingP
 
 	    $('#character-click').addClass('using');
 
-	    //right part of navigation bar
-		rightWidth = w*.4;
-		if(rightWidth < 200) rightWidth = 200;
-		var charSize = $('#character-click').height();
-		if(charSize != undefined) rightWidth += charSize;
-	    $('#navigation-bar .nav.navbar-nav.navbar-right').css({
-	        width: rightWidth
-	    });
-
 	    $('#canvas').css({ top: h*.2 });
 		if (w > 720) {
 			$('#canvas').css({ width: w*.5 });
@@ -22,8 +13,8 @@ myApp.controller('resultsController', function($scope, dataProvider, processingP
 			$('#canvas').css({ width: w*.8 });
 		}
 
-		var homeHeight = $('#navigation-bar .nav.navbar-nav.navbar-left').height();
-		$('#navigation-bar .nav.navbar-nav.navbar-left').css({ width: homeHeight });
+		//var homeHeight = $('#navigation-bar .nav.navbar-nav.navbar-left').height();
+		//$('#navigation-bar .nav.navbar-nav.navbar-left').css({ width: homeHeight });
 
 		$scope.message = 'This is a shitty app!';
 		dataProvider.getData(function(err, data){

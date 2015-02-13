@@ -11,15 +11,6 @@ $( window ).resize(function() {
 
 	//$('#navigation-bar .container-fluid #header #typename').css({ padding-top: h*.1 });
 
-	var homeHeight = $('#navigation-bar .nav.navbar-nav.navbar-left').height();
-	$('#navigation-bar .nav.navbar-nav.navbar-left').css({ width: homeHeight });
-
-	//right part of navigation bar
-	rightWidth = w*.4;
-	if(rightWidth < 200) rightWidth = 200;
-	var charSize = $('#character-click').height();
-	if(charSize != undefined) rightWidth += charSize;
-    $('#navigation-bar .nav.navbar-nav.navbar-right').css({
-        width: rightWidth
-    });
+	//var homeHeight = $('#navigation-bar .nav.navbar-nav.navbar-left').height();
+	//$('#navigation-bar .nav.navbar-nav.navbar-left').css({ width: homeHeight });
 });

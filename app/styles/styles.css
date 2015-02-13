@@ -40,15 +40,16 @@ i:hover, i:active{
   max-width:90%;
 }
 
-  .overflow p {color:#ccc;line-height:50px;padding:0 10px;margin:0;display:inline;}
+.overflow p {
+  	color: #ccc;
+  	line-height: 50px;
+  	padding:0 10px;
+  	margin:0;
+  	display:inline;
+  }
 
 
 /* All Menus */
-
-.nav-justified li {
-display:table-cell !important;
-width:1% !important;
-}
 
 .navbar li{
 	margin: 0; padding: 0;
@@ -69,23 +70,19 @@ width:1% !important;
 .navbar .container-fluid{
 	display: inline-block;
 	height: 100%;
+	width: 100%;
 }
 
 /* Top Menu */
+#navigation-bar{
+	background-color: #B0B0B0;
+	height: 20%;
+	width: 100%;
+}
 
 #navigation-bar .using{
 	opacity: .5;
 	background-color: #FFFFFF
-}
-
-#navigation-bar{
-	background-color: #B0B0B0;
-	height: 20%
-}
-
-#navigation-bar .nav.nav-justified{
-	height: 100%;
-	background-color: #FF2233
 }
 
 #navigation-bar .container-fluid{
@@ -93,44 +90,45 @@ width:1% !important;
 	width: 100%;
 }
 
-#navigation-bar .nav.navbar-nav.navbar-right{
-	width: 250px;
-	height: 100%
+#navigation-bar .nav.nav-justified{
+	height: 100%;
 }
 
-#navigation-bar .nav.navbar-nav.navbar-left{
-	width: 20%;
+#navigation-bar li {
+	height: 100%;
+	background-color: #FF2233;
+	display:table-cell !important;
+	width:1% !important;
 }
 
-#navigation-bar .nav.navbar-nav.navbar-left #home{
+#navigation-bar #home{
 	height: 100%;
 	width: 100%;
 }
 
-#navigation-bar .nav.navbar-nav.navbar-left #home a{
+#navigation-bar #home input{
 	background-color: transparent;
 	height: 100%;
 	width: 100%;
 }
 
-#navigation-bar .container-fluid .nav.navbar-nav.navbar-left #home a #homeicon{
+#navigation-bar.nav #home a #homeicon{
 	left:0%;
 	height: 100%;
 	width: 100%;
 }
 
-#navigation-bar .container-fluid #header{
+#navigation-bar #header{
 	top: 10%;
 	width: 10%;
 	height: 100%;
-	background-color: #FF4444;
 } 
 
-#navigation-bar .container-fluid #header a#typename{
+#navigation-bar #header #typename{
 	padding: 40px;
 	width: 100%;
 	height: 100%;
-	font-size: 40px;
+	font-size: 16px;
 } 
 
 #navigation-bar #home:active{
