@@ -27,7 +27,28 @@ i:hover, i:active{
 	background-color : transparent
 }
 
+.overflow {
+  position:absolute;
+  top:0;
+  left:0;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 0;
+  color:#ccc;
+  max-width:90%;
+}
+
+  .overflow p {color:#ccc;line-height:50px;padding:0 10px;margin:0;display:inline;}
+
+
 /* All Menus */
+
+.nav-justified li {
+display:table-cell !important;
+width:1% !important;
+}
 
 .navbar li{
 	margin: 0; padding: 0;
@@ -62,7 +83,7 @@ i:hover, i:active{
 	height: 20%
 }
 
-#navigation-bar .nav.navbar-nav{
+#navigation-bar .nav.nav-justified{
 	height: 100%;
 	background-color: #FF2233
 }

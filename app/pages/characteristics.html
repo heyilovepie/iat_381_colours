@@ -1,13 +1,9 @@
 <div data-ng-init="init()">
   <nav class="navbar navbar-default navbar-fixed-top" id="navigation-bar">
     <div class="container-fluid">
-      <ul class="nav navbar-nav navbar-left menuitem">
+      <ul class="nav nav-justified">
         <li id="home"><a href="#/"><input id="homeicon" type="image" src="pics/homeicon.png" alt="home"></input></a></li>
-      </ul>
-      <div class="navbar-header menuitem" id="header">
-        <a class="navbar-brand" id="typename" href="#/">{{type.name}}</a>
-      </div>
-      <ul class="nav navbar-nav navbar-right menuitem">
+        <li><a class="navbar-brand" id="typename" href="#/">{{type.name}}</a></li>
         <li ng-repeat="d in data">
           <a href="#/characteristics/{{d.id}}" id="{{d.id}}" ng-click="isActive(d.id)" class="circlelink" ><i class="fa fa-circle"></i></a>
         </li>
