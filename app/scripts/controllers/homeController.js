@@ -1,21 +1,22 @@
 // create the controller and inject Angular's $scope
 myApp.controller('homeController', function($scope, dataProvider, processingProvider) {
-	$scope.message = 'This is a shitty app!';
-
-	dataProvider.getData(function(err, data){
-	    if(!err && myApp.data == undefined){
-	    	myApp.data = data;
-	    	$scope.data = myApp.data;
-	    }
-	});
-	$scope.data = myApp.data;
-
-	$scope.canvas = document.getElementById("canvas");
-	$scope.p = new Processing(canvas, processingProvider.sketch("thisissf"));
 
 	$scope.init = function () {
 	    var h = $(window).height();
 	    var w = $(window).width();
+
+	    $scope.name = "Home";
+
+	    dataProvider.getData(function(err, data){
+	    	if(!err && myApp.data == undefined){
+	    		myApp.data = data;
+	    		$scope.data = myApp.data;
+	    	}
+		});
+		$scope.data = myApp.data;
+
+		$scope.canvas = document.getElementById("canvas");
+		$scope.p = new Processing(canvas, processingProvider.sketch("thisissf"));
 
 	    $('#home').addClass('using');
 
@@ -26,4 +27,6 @@ myApp.controller('homeController', function($scope, dataProvider, processingProv
 			$('#canvas').css({ width: w*.8 });
 		}
   	};
+
+  	$scope.init();
 });

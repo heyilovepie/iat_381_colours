@@ -27,28 +27,6 @@ i:hover, i:active{
 	background-color : transparent
 }
 
-.overflow {
-  position:absolute;
-  top:0;
-  left:0;
-  display: block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-top: 0;
-  color:#ccc;
-  max-width:90%;
-}
-
-.overflow p {
-  	color: #ccc;
-  	line-height: 50px;
-  	padding:0 10px;
-  	margin:0;
-  	display:inline;
-  }
-
-
 /* All Menus */
 
 .navbar li{
@@ -67,27 +45,27 @@ i:hover, i:active{
 	height: 100%;
 }
 
-.navbar .container-fluid{
-	display: inline-block;
-	height: 100%;
-	width: 100%;
-}
-
 /* Top Menu */
 #navigation-bar{
+	margin: 0; padding: 0;
 	background-color: #B0B0B0;
 	height: 20%;
 	width: 100%;
 }
 
-#navigation-bar .using{
-	opacity: .5;
-	background-color: #FFFFFF
+#navigation-bar .selectable{
+	margin: 0; padding: 0;
+	top:0;
 }
 
-#navigation-bar .container-fluid{
-	height: 100%;
-	width: 100%;
+#navigation-bar .selectable.using{
+	opacity: .5;
+	background-color: #FFF88F
+}
+
+#navigation-bar .selectable:active{
+	opacity: .5;
+	background-color: #FFFFFF
 }
 
 #navigation-bar .nav.nav-justified{
@@ -96,7 +74,6 @@ i:hover, i:active{
 
 #navigation-bar li {
 	height: 100%;
-	background-color: #FF2233;
 	display:table-cell !important;
 	width:1% !important;
 }
@@ -114,26 +91,26 @@ i:hover, i:active{
 
 #navigation-bar.nav #home a #homeicon{
 	left:0%;
+	top:0%;
 	height: 100%;
 	width: 100%;
 }
 
-#navigation-bar #header{
-	top: 10%;
-	width: 10%;
-	height: 100%;
+#navigation-bar .ng-scope{
+	height: 50%;
 } 
+
+#navigation-bar #header{
+	top:0%;
+	margin: 0%; padding: 0%;
+	height: 100%;
+}
 
 #navigation-bar #header #typename{
-	padding: 40px;
-	width: 100%;
-	height: 100%;
+	margin: 0%; padding: 0%;
+	height: 50%;
+	top:0%;
 	font-size: 16px;
-} 
-
-#navigation-bar #home:active{
-	opacity: .5;
-	background-color: #FFFFFF
 }
 
 #navigation-bar #character-click{

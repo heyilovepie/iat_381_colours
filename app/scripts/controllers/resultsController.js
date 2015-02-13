@@ -4,6 +4,8 @@ myApp.controller('resultsController', function($scope, dataProvider, processingP
 	    var h = $(window).height();
 	    var w = $(window).width();
 
+	    $scope.name = "Results";
+
 	    $('#character-click').addClass('using');
 
 	    $('#canvas').css({ top: h*.2 });
