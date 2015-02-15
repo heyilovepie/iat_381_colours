@@ -9,8 +9,28 @@ $( window ).resize(function() {
 		$('#canvas').css({ width: w*.8 });
 	}
 
-	//$('#navigation-bar .container-fluid #header #typename').css({ padding-top: h*.1 });
+	var iconwidth = w * 1/8;
+	if (iconwidth > h * .18) iconwidth = h * .18;
+	if (iconwidth < h * .1) iconwidth = h * .1;
+	$('#navigation-bar .icon').css({
+		height: iconwidth
+	})
 
-	//var homeHeight = $('#navigation-bar .nav.navbar-nav.navbar-left').height();
-	//$('#navigation-bar .nav.navbar-nav.navbar-left').css({ width: homeHeight });
+	if( w > 400){
+		$('#header').removeClass('invisible');
+	}else{
+		$('#header').addClass('invisible');
+	}
+
+	var navheight = h * .2;
+
+	$('#navigation-bar').css({
+		height: navheight
+	})
+
+	var icontop = ( navheight - iconwidth ) / 2;
+
+	$('#navigation-bar .selectable').css({
+		top: icontop
+	})
 });

@@ -29,6 +29,25 @@ myApp.controller('characteristicsController', function($scope, $routeParams, dat
       $('#canvas').css({ width: w*.8 });
     }
 
+    var iconwidth = w * 1/8;
+    if (iconwidth > h * .18) iconwidth = h * .18;
+    if (iconwidth < h * .1) iconwidth = h * .1;
+    $('#navigation-bar .icon').css({
+      height: iconwidth
+    })
+
+    var navheight = h * .2;
+
+    $('#navigation-bar').css({
+      height: navheight
+    })
+
+    var icontop = ( navheight - iconwidth ) / 2;
+
+    $('#navigation-bar .selectable').css({
+      top: icontop
+    })
+
    dataProvider.getData(function(err, data){
       if(!err && myApp.data == undefined){
         myApp.data = data;

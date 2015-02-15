@@ -1,10 +1,10 @@
 <div data-ng-init="init()" id="controller-all">
   <nav class="navbar navbar-default navbar-fixed-top" id="navigation-bar">
     <ul class="nav nav-justified">
-      <li><a href="#/" class="selectable" id="home"><input id="homeicon" type="image" src="pics/homeicon.png" alt="home"></input></a></li>
+      <li><a href="#/" class="selectable" id="home"><input class="icon" id="homeicon" type="image" src="pics/homeicon.png" alt="home"></input></a></li>
       <li class="navbar-header" id="header"><h1 id="typename">{{name}}</h1></li>
-      <li ng-repeat="d in data">
-        <a href="#/characteristics/{{d.id}}" class="selectable"><input id="circle" type="image" src="pics/circle.png" alt="{{d.name}}"></input></a>
+      <li ng-repeat="d in data" id="characteristics">
+        <a href="#/characteristics/{{d.id}}" class="selectable chara"><input class="icon charaicon" type="image" src="pics/circle.png" alt="{{d.name}}"></input></a>
       </li>
     </ul>
   </nav>

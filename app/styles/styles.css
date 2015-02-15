@@ -10,7 +10,7 @@ button, canvas, input {
 	/*Stop the blue outline!*/
 	outline: none !important;
 	background-color : transparent;
-	border: 0px
+	margin: 0; padding: 0; border: 0;
 }
 
 a{
@@ -36,13 +36,9 @@ i:hover, i:active{
 }
 
 .navbar a, .navbar i, .navbar ul{
+	height:100%;
 	margin: 0; padding: 0;
 	white-space: nowrap;
-}
-
-.navbar .menuitem{
-	display: inline-block;
-	height: 100%;
 }
 
 /* Top Menu */
@@ -78,42 +74,40 @@ i:hover, i:active{
 	width:1% !important;
 }
 
+/* Components */
 #navigation-bar #home{
 	height: 100%;
-	width: 100%;
 }
 
-#navigation-bar #home input{
+#navigation-bar.nav #home #homeicon{
+	height: 100%;
 	background-color: transparent;
-	height: 100%;
-	width: 100%;
 }
-
-#navigation-bar.nav #home a #homeicon{
-	left:0%;
-	top:0%;
-	height: 100%;
-	width: 100%;
-}
-
-#navigation-bar .ng-scope{
-	height: 50%;
-} 
 
 #navigation-bar #header{
-	top:0%;
-	margin: 0%; padding: 0%;
 	height: 100%;
+	margin: 0%; padding: 0%;
 }
 
 #navigation-bar #header #typename{
+	height: 100%%;
 	margin: 0%; padding: 0%;
-	height: 50%;
-	top:0%;
 	font-size: 16px;
 }
 
-#navigation-bar #character-click{
+#navigation-bar #characteristics{
+	height: 100%;
+} 
+
+#navigation-bar #characteristics .chara{
+	height: 100%;
+} 
+
+#navigation-bar #characteristics .chara .charaicon{
+	height: 100%;
+} 
+
+#navigation-bar #character{
 	height: 100%;
 }
 
@@ -130,6 +124,7 @@ i:hover, i:active{
 	background-color: #fdf;
 	text-align: center;
 }
+
 
 #canvas{
 	top: 20%;
