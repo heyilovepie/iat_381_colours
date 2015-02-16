@@ -11,12 +11,12 @@ myApp.styling = function() {
 
 	var iconwidth = w * 1/8;
 	if (iconwidth > h * .18) iconwidth = h * .18;
-	//if (iconwidth < h * .1) iconwidth = h * .1;
+	if (iconwidth < h * .1) iconwidth = h * .1;
 	$('#navigation-bar .icon').css({
 		height: iconwidth
 	});
 
-	if( w > 400){
+	if( w > 200){
 		$('#header').removeClass('invisible');
 	}else{
 		$('#header').addClass('invisible');
