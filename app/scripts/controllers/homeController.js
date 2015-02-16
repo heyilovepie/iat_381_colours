@@ -17,23 +17,12 @@ myApp.controller('homeController', function($scope, dataProvider) {
 			processing.noStroke();
 			processing.rect(0, 0, x, processing.height);
 		};
-
-		processing.loadCharacteristics = function(data){
-			eye = data[0].colour;
-			hair = data[1].colour;
-			shirt = data[2].colour;
-			pants = data[3].colour;
-
-			console.log(data);
-			console.log(eye);
-		};
-		processing.changeCharacteristic = function(id, colour){
-			if(id == "eye") eye = colour;
-		};
 	}
 
 	$scope.init = function () {
 		myApp.styling();
+
+		$("#home").addClass("using");
 
 	    $scope.name = "Home";
 
