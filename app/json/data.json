@@ -24,12 +24,12 @@
 	{
 		"name":"Shirt",
 		"id":"shirt",
-		"colour":"pink",
+		"colour":"white",
 		"options":[
-			{"name": "blue"},
 			{"name": "black"},
-			{"name": "pink"},
-			{"name": "green"}
+			{"name": "blue"},
+			{"name": "green"},
+			{"name": "red"}
 		]
 	},
 	{
@@ -37,10 +37,10 @@
 		"id":"pants",
 		"colour":"grey",
 		"options":[
+			{"name": "grey"},
 			{"name": "blue"},
-			{"name": "black"},
 			{"name": "white"},
-			{"name": "grey"}
+			{"name": "red"}
 		]
 	}
 ]

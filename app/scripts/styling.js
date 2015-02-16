@@ -16,11 +16,14 @@ myApp.styling = function() {
 		height: iconwidth
 	});
 
-	if( w > 200){
+	if( w > 400){
 		$('#header').removeClass('invisible');
 	}else{
 		$('#header').addClass('invisible');
 	}
+	$('#header').css({
+		padding: h * .1
+	});
 
 	var navheight = h * .2;
 
