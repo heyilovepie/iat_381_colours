@@ -1,0 +1,153 @@
+html {
+  min-height:100%;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  position:relative;
+  width:100%;
+}
+
+button, canvas, input {
+	/*Stop the blue outline!*/
+	outline: none !important;
+	background-color : transparent;
+	margin: 0; padding: 0; border: 0;
+}
+
+a{
+	/* Stop the light grey background */
+	background-color: transparent
+}
+
+.center {
+	text-align: center
+}
+
+i:hover, i:active{
+	text-decoration: none;
+	background-color : transparent
+}
+
+/* All Menus */
+
+.navbar li{
+	margin: 0; padding: 0;
+	display: inline-block;
+	height: 100%;
+}
+
+.navbar a, .navbar i, .navbar ul{
+	height:100%;
+	margin: 0; padding: 0;
+	white-space: nowrap;
+}
+
+/* Top Menu */
+#navigation-bar{
+	margin: 0; padding: 0;
+	background-color: #B0B0B0;
+	height: 20%;
+	width: 100%;
+}
+
+#navigation-bar .selectable{
+	margin: 0; padding: 0;
+	top:0;
+}
+
+#navigation-bar .selectable.using{
+	opacity: .5;
+	background-color: #FFF88F
+}
+
+#navigation-bar .selectable:active{
+	opacity: .5;
+	background-color: #FFFFFF
+}
+
+#navigation-bar .nav.nav-justified{
+	height: 100%;
+}
+
+#navigation-bar li {
+	height: 100%;
+	display:table-cell !important;
+	width:1% !important;
+}
+
+/* Components */
+#navigation-bar #home{
+	height: 100%;
+}
+
+#navigation-bar.nav #home #homeicon{
+	background-color: transparent;
+}
+
+#navigation-bar #header{
+	height: 100%;
+	margin: 0%; padding: 0%;
+}
+
+#navigation-bar #header #typename{
+	margin: 0%; padding: 0%;
+	font-size: 16px;
+}
+
+#navigation-bar #characteristics{
+	height: 100%;
+} 
+
+#navigation-bar #characteristics .chara{
+	height: 100%;
+} 
+
+#navigation-bar #characteristics .chara .charaicon{
+} 
+
+#navigation-bar #character{
+	height: 100%;
+}
+
+#navigation-bar #charactericon{
+}
+
+/*Middle */
+.graphics{
+	position: fixed;
+	top:20%;
+	bottom:10%;
+	width: 100%;
+	background-color: #fdf;
+	text-align: center;
+}
+
+
+#canvas{
+	top: 20%;
+	width: 50%;
+	height: 70%;
+}
+
+/* Bottom Menu */
+
+.navbar.navbar-default.navbar-fixed-bottom{
+	background-color: #B0B0B0;
+	height: 10%;
+	width: 100%;
+}
+
+#characteristics-bar .nav.navbar-nav{
+	background-color: #FF2233;
+	width: 100%;
+	height: 100%;
+}
+
+#characteristics-bar .nav.navbar-nav li{
+	height: 100%;
+	width: 25%;
+}
+
+#characteristics-bar .nav.navbar-nav li button{
+	height: 100%;
+	width: 100%;
+}

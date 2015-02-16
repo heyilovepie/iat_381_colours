@@ -1,0 +1,28 @@
+<div data-ng-init="init()" id="controller-all">
+  <nav class="navbar navbar-default navbar-fixed-top" id="navigation-bar">
+    <ul class="nav nav-justified">
+      <li><a href="#/" class="selectable" id="home"><input class="icon" id="homeicon" type="image" src="pics/icons/homeicon.png" alt="home"></input></a></li>
+      <li class="navbar-header" id="header"><h1 id="typename">{{name}}</h1></li>
+      <li ng-repeat="d in data" id="characteristics">
+        <a href="#/characteristics/{{d.id}}" class="selectable chara"><input class="icon charaicon" type="image" src="pics/icons/circle.png" alt="{{d.name}}"></input></a>
+      </li>
+      <li><a class="selectable" id="character" href="#/results" class="active">
+        <input class="icon" id="charactericon" type="image" src="pics/icons/charactericon.png" alt="character"></input>
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="graphics">
+    <p><canvas id="canvas"></canvas></p>
+    <p>{{message}}</p>
+
+    <div id="datahome">
+      <table>
+          <tr><th>DATA</th></tr>
+           <tr ng-repeat="d in data">
+            <td>{{d.name}} </td> <td>{{d.colour}}</td>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
