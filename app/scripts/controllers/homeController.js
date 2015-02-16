@@ -100,7 +100,19 @@ myApp.controller('homeController', function($scope, dataProvider) {
 		});
 		$scope.data = myApp.data;
 
+		var myEvent = function(){
+			console.log("eventlistener");
+		};
+
 		$scope.canvas = document.getElementById("canvas");
+
+		$scope.canvas.addEventListener("mousedown", myEvent);
+		$scope.canvas.addEventListener("click", myEvent);
+		$scope.canvas.addEventListener("mouseover", myEvent);
+		$scope.canvas.addEventListener("mouseout", myEvent);
+		$scope.canvas.addEventListener("resize", myEvent);
+		$scope.canvas.addEventListener("mousemove", myEvent);
+
     	$scope.p = new Processing(canvas, $scope.sketch );
   	};
 

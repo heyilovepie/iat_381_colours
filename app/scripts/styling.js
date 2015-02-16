@@ -11,7 +11,7 @@ myApp.styling = function() {
 
 	var iconwidth = w * 1/8;
 	if (iconwidth > h * .18) iconwidth = h * .18;
-	if (iconwidth < h * .1) iconwidth = h * .1;
+	//if (iconwidth < h * .1) iconwidth = h * .1;
 	$('#navigation-bar .icon').css({
 		height: iconwidth
 	});
@@ -40,3 +40,14 @@ myApp.styling = function() {
 
 $( window ).resize(myApp.styling);
 $( window ).load(myApp.styling);
+
+$(window).scroll(function(){
+
+	var scrollTop = $(window).scrollTop();
+	var w = $(window).width();
+	var h = $(window).height();
+
+	if(w > height){
+        $('#canvas').css({ top: h*.2 });
+    }
+});
