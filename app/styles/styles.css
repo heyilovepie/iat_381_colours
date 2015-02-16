@@ -80,7 +80,6 @@ i:hover, i:active{
 }
 
 #navigation-bar.nav #home #homeicon{
-	height: 100%;
 	background-color: transparent;
 }
 
@@ -90,7 +89,6 @@ i:hover, i:active{
 }
 
 #navigation-bar #header #typename{
-	height: 100%%;
 	margin: 0%; padding: 0%;
 	font-size: 16px;
 }
@@ -104,7 +102,6 @@ i:hover, i:active{
 } 
 
 #navigation-bar #characteristics .chara .charaicon{
-	height: 100%;
 } 
 
 #navigation-bar #character{
@@ -112,7 +109,6 @@ i:hover, i:active{
 }
 
 #navigation-bar #charactericon{
-	height: 100%;
 }
 
 /*Middle */

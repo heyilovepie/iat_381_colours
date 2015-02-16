@@ -1,9 +1,39 @@
 // create the controller and inject Angular's $scope
-myApp.controller('homeController', function($scope, dataProvider, processingProvider) {
+myApp.controller('homeController', function($scope, dataProvider) {
+
+	$scope.sketch = function (processing) {
+		var x = 0;
+		var eye = "black";
+		var hair = "red";
+		var shirt = "white";
+		var pants = "black";
+		processing.setup = function(){
+			processing.size(200, 300);
+			processing.background(255);
+		};
+		processing.draw = function(){
+			x += 1;
+			processing.fill(100);
+			processing.noStroke();
+			processing.rect(0, 0, x, processing.height);
+		};
+
+		processing.loadCharacteristics = function(data){
+			eye = data[0].colour;
+			hair = data[1].colour;
+			shirt = data[2].colour;
+			pants = data[3].colour;
+
+			console.log(data);
+			console.log(eye);
+		};
+		processing.changeCharacteristic = function(id, colour){
+			if(id == "eye") eye = colour;
+		};
+	}
 
 	$scope.init = function () {
-	    var h = $(window).height();
-	    var w = $(window).width();
+		myApp.styling();
 
 	    $scope.name = "Home";
 
@@ -16,35 +46,7 @@ myApp.controller('homeController', function($scope, dataProvider, processingProv
 		$scope.data = myApp.data;
 
 		$scope.canvas = document.getElementById("canvas");
-		$scope.p = new Processing(canvas, processingProvider.sketch("thisissf"));
-
-	    $('#home').addClass('using');
-
-	    $('#canvas').css({ top: h*.2 });
-		if (w > 720) {
-			$('#canvas').css({ width: w*.5 });
-		} else { //mobile
-			$('#canvas').css({ width: w*.8 });
-		}
-
-		var iconwidth = w * 1/8;
-		if (iconwidth > h * .18) iconwidth = h * .18;
-		if (iconwidth < h * .1) iconwidth = h * .1;
-		$('#navigation-bar .icon').css({
-			height: iconwidth
-		})
-
-		var navheight = h * .2;
-
-		$('#navigation-bar').css({
-			height: navheight
-		})
-
-		var icontop = ( navheight - iconwidth ) / 2;
-
-		$('#navigation-bar .selectable').css({
-			top: icontop
-		})
+    	$scope.p = new Processing(canvas, $scope.sketch );
   	};
 
   	$scope.init();

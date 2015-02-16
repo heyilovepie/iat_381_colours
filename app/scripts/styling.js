@@ -1,4 +1,4 @@
-$( window ).resize(function() {
+myApp.styling = function() {
 	var h = $(window).height();
 	var w = $(window).width();
 
@@ -14,9 +14,9 @@ $( window ).resize(function() {
 	if (iconwidth < h * .1) iconwidth = h * .1;
 	$('#navigation-bar .icon').css({
 		height: iconwidth
-	})
+	});
 
-	if( w > 400){
+	if( w > 200){
 		$('#header').removeClass('invisible');
 	}else{
 		$('#header').addClass('invisible');
@@ -26,11 +26,14 @@ $( window ).resize(function() {
 
 	$('#navigation-bar').css({
 		height: navheight
-	})
+	});
 
 	var icontop = ( navheight - iconwidth ) / 2;
 
 	$('#navigation-bar .selectable').css({
 		top: icontop
-	})
-});
+	});
+};
+
+$( window ).resize(myApp.styling);
+$( window ).load(myApp.styling);
